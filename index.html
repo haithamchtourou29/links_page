@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page de liens sociaux - Haitham Chtourou">
+    <title>Haitham Chtourou - Liens</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            min-height: 100vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            padding: 20px; 
+        }
+        
+        .container { 
+            max-width: 500px; 
+            width: 100%; 
+            background: white; 
+            border-radius: 20px; 
+            padding: 40px; 
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3); 
+            animation: fadeIn 0.5s ease; 
+        }
+        
+        @keyframes fadeIn { 
+            from { opacity: 0; transform: translateY(20px); } 
+            to { opacity: 1; transform: translateY(0); } 
+        }
+        
+        .profile { 
+            text-align: center; 
+            margin-bottom: 30px; 
+        }
+        
+        .profile-image { 
+            width: 120px; 
+            height: 120px; 
+            border-radius: 50%; 
+            margin: 0 auto 20px; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 48px;
+            font-weight: bold;
+            font-family: 'Segoe UI', sans-serif;
+            border: 4px solid #667eea; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            display: none;
+        }
+        
+        .profile-image.has-image img {
+            display: block;
+        }
+        
+        .profile-image.has-image {
+            background: transparent;
+            padding: 0;
+        }
+        
+        h1 { 
+            color: #2c3e50; 
+            font-size: 28px; 
+            margin-bottom: 10px; 
+            font-weight: 700;
+        }
+        
+        .subtitle { 
+            color: #7f8c8d; 
+            font-size: 16px; 
+        }
+        
+        .links { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 15px; 
+        }
+        
+        .link-button { 
+            display: flex; 
+            align-items: center; 
+            gap: 15px; 
+            padding: 18px 25px; 
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); 
+            border-radius: 12px; 
+            text-decoration: none; 
+            color: #2c3e50; 
+            font-weight: 600; 
+            font-size: 16px; 
+            transition: all 0.3s ease; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+        }
+        
+        .link-button:hover { 
+            transform: translateY(-3px); 
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15); 
+        }
+        
+        .link-button.facebook { 
+            background: linear-gradient(135deg, #4267B2 0%, #2d4373 100%); 
+            color: white; 
+        }
+        
+        .link-button.instagram { 
+            background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+            color: white; 
+        }
+        
+        .link-button.linkedin { 
+            background: linear-gradient(135deg, #0077b5 0%, #005582 100%); 
+            color: white; 
+        }
+        
+        .link-button.whatsapp { 
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); 
+            color: white; 
+        }
+        
+        .link-button.email { 
+            background: linear-gradient(135deg, #EA4335 0%, #c5221f 100%); 
+            color: white; 
+        }
+        
+        .icon { 
+            font-size: 24px; 
+            width: 30px; 
+            text-align: center; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .icon-facebook {
+            font-family: 'Segoe UI', sans-serif;
+        }
+        
+        .icon-linkedin {
+            font-family: 'Segoe UI', sans-serif;
+        }
+        
+        footer { 
+            text-align: center; 
+            margin-top: 30px; 
+            color: #7f8c8d; 
+            font-size: 14px; 
+        }
+        
+        @media (max-width: 600px) { 
+            .container { padding: 30px 20px; } 
+            h1 { font-size: 24px; } 
+            .link-button { padding: 15px 20px; font-size: 15px; } 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile">
+            <div class="profile-image" id="profileImage">
+                <img src="profile.jpg" alt="Haitham Chtourou" onerror="this.parentElement.classList.remove('has-image'); this.style.display='none';">
+                HC
+            </div>
+            <h1>Haitham Chtourou</h1>
+            <p class="subtitle">Développeur & Créateur</p>
+        </div>
+        <div class="links">
+            <a href="https://www.facebook.com/haitham.chtourou/" target="_blank" rel="noopener noreferrer" class="link-button facebook">
+                <span class="icon icon-facebook">f</span>
+                <span>Facebook</span>
+            </a>
+            <a href="https://www.instagram.com/haitham.chtourou/" target="_blank" rel="noopener noreferrer" class="link-button instagram">
+                <span class="icon">📷</span>
+                <span>Instagram</span>
+            </a>
+            <a href="https://www.linkedin.com/in/chtourou-haitham/" target="_blank" rel="noopener noreferrer" class="link-button linkedin">
+                <span class="icon icon-linkedin">in</span>
+                <span>LinkedIn</span>
+            </a>
+            <a href="https://wa.me/21625231925" target="_blank" rel="noopener noreferrer" class="link-button whatsapp">
+                <span class="icon">💬</span>
+                <span>WhatsApp</span>
+            </a>
+            <a href="mailto:haithamchtourou29@gmail.com" class="link-button email">
+                <span class="icon">✉️</span>
+                <span>Email</span>
+            </a>
+        </div>
+        <footer>
+            <p>© 2024 Haitham Chtourou</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Vérifier si l'image existe, sinon afficher les initiales
+        const profileImage = document.getElementById('profileImage');
+        const img = profileImage.querySelector('img');
+        
+        img.onload = function() {
+            profileImage.classList.add('has-image');
+        };
+        
+        img.onerror = function() {
+            profileImage.classList.remove('has-image');
+            img.style.display = 'none';
+        };
+    </script>
+</body>
+</html>
+
